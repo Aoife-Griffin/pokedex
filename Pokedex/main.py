@@ -44,10 +44,10 @@ def load_pokemon():
     pokemon_image.image = img
 
     # Get information
-    pokemon_information.config(text=f"{pokemon.dex} - {pokemon.name}")
+    pokemon_information.config(text=f"{pokemon.dex} - {pokemon.name}".title())
 
     # Get type
-    pokemon_types.config(text=f"{pokemon.types}")
+    pokemon_types.config(text=" - ".join([t for t in pokemon.types]).title())
 
 
 ### Search for Pokemon
